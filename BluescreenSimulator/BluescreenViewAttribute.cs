@@ -24,7 +24,7 @@ namespace BluescreenSimulator
         public static void ShowView(this IBluescreenViewModel bluescreen)
         {
             var attribute = bluescreen.GetType().GetCustomAttribute<BluescreenViewAttribute>();
-            if (attribute is null) throw new InvalidOperationException("No BluescreenViewAttribute has been found");
+            if (attribute is null) throw new InvalidOperationException("未找到BluescreenViewAttribute");
             var type = attribute.WindowType;
 
             void DispatcherWindowShow()

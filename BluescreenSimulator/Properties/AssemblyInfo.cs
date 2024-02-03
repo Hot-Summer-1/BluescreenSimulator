@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows;
 
@@ -6,11 +7,11 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("BluescreenSimulator")]
-[assembly: AssemblyDescription("A program to simulate BSODs with lots of features.")]
+[assembly: AssemblyDescription("一个模拟蓝屏的程序")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("FlyTech Videos")] // mm so now we're an industrial company UHH
+[assembly: AssemblyCompany("Hot-Summer-1")] // mm so now we're an industrial company UHH
 [assembly: AssemblyProduct("BluescreenSimulator")]
-[assembly: AssemblyCopyright("© FlyTech Videos 2019")]
+[assembly: AssemblyCopyright("© Hot-Summer-1 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -49,8 +50,9 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.4.0")]
-[assembly: AssemblyFileVersion("3.4.0")]
+[assembly: AssemblyVersion("3.4.0.0")]
+[assembly: AssemblyFileVersion("3.4.0.0")]
+[assembly: NeutralResourcesLanguage("")]
 
 namespace BluescreenSimulator.Properties
 {

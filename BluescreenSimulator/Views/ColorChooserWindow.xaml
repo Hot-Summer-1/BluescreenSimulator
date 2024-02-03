@@ -5,8 +5,8 @@
                               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                               xmlns:fluent="urn:fluent-ribbon"
                               xmlns:views="clr-namespace:BluescreenSimulator.Views"
-                              mc:Ignorable="d" ResizeMode="NoResize" Title="Color picker" WindowStartupLocation="CenterOwner"  Style="{DynamicResource {x:Type Window}}"
-                              d:DataContext="{d:DesignInstance views:ColorChooserWindow+ColorWindowData, IsDesignTimeCreatable=True}" Height="500"
+                              mc:Ignorable="d" ResizeMode="NoResize" Title="颜色选取器" WindowStartupLocation="CenterOwner"  Style="{DynamicResource {x:Type Window}}"
+                              d:DataContext="{d:DesignInstance views:ColorChooserWindow, IsDesignTimeCreatable=True}" Height="500"
                               Width="565">
     <Window.Resources>
         <ControlTemplate x:Key="RoundedSlider" TargetType="{x:Type Slider}">
@@ -159,7 +159,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Color picker" VerticalAlignment="Center"
+        <TextBlock Text="颜色选取器" VerticalAlignment="Center"
                    HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" />
         <StackPanel Grid.Row="1" Margin="20,0">
             <StackPanel.Resources>
@@ -179,7 +179,7 @@
                 </Style>
             </StackPanel.Resources>
             <StackPanel>
-                <TextBlock Text="Hue" Foreground="{DynamicResource TextBrush}" />
+                <TextBlock Text="色调" Foreground="{DynamicResource TextBrush}" />
                 <Slider Value="{Binding Hue}">
                     <Slider.Background>
                         <LinearGradientBrush StartPoint="0.0,0.5" EndPoint="1.0, 0.5">
@@ -195,7 +195,7 @@
                 </Slider>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Saturation" Foreground="{DynamicResource TextBrush}" />
+                <TextBlock Text="饱和度" Foreground="{DynamicResource TextBrush}" />
                 <Slider Value="{Binding Saturation}">
                     <Slider.Background>
                         <LinearGradientBrush EndPoint="1,0" StartPoint="0.0,0">
@@ -206,7 +206,7 @@
                 </Slider>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Lightness" Foreground="{DynamicResource TextBrush}" />
+                <TextBlock Text="亮度" Foreground="{DynamicResource TextBrush}" />
                 <Slider Value="{Binding Lightness}">
                     <Slider.Background>
                         <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
@@ -217,7 +217,7 @@
                 </Slider>
             </StackPanel>
             <DockPanel>
-                <TextBlock Text="Opacity" Foreground="{DynamicResource TextBrush}" Margin="0,5,10,5" />
+                <TextBlock Text="不透明度" Foreground="{DynamicResource TextBrush}" Margin="0,5,10,5" />
                 <Slider Margin="0,1,0,0" IsSnapToTickEnabled="False" VerticalAlignment="Center" Value="{Binding Opacity}" Minimum="0" Maximum="1" Style="{x:Null}" />
             </DockPanel>
             <Grid Height="60" Margin="0,20,0,5">
@@ -232,8 +232,8 @@
                      FontFamily="Consolas" />
         </StackPanel>
         <UniformGrid Columns="2" Grid.Row="2" Height="40" Margin="25,10">
-            <Button Margin="15,5" Content="Ok" Click="Ok_Click" />
-            <Button Margin="15,5" Content="Cancel" Click="Cancel_Click" />
+            <Button Margin="15,5" Content="确定" Click="Ok_Click" />
+            <Button Margin="15,5" Content="取消" Click="Cancel_Click" />
         </UniformGrid>
     </Grid>
 </Window>

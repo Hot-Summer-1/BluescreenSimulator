@@ -10,7 +10,7 @@ namespace BluescreenSimulator.ViewModels
 {
     public class BluescreenViewModelBase<T> : ViewModelBase<T>, IBluescreenViewModel where T : BluescreenBase, new()
     {
-        public virtual string StyleName => "Bluescreen";
+        public virtual string StyleName => "蓝屏";
 
         public BluescreenViewModelBase() : this(null)
         {
@@ -65,7 +65,7 @@ namespace BluescreenSimulator.ViewModels
             }
         }
         public bool IsNotWaiting => !IsWaiting;
-        [CmdParameter("-d", Description = "Bluescreen Delay {duration} in seconds (0-86400)", FullAlias = "delay")]
+        [CmdParameter("-d", Description = "蓝屏延迟 {duration}（秒数） (0-86400)", FullAlias = "delay")]
         public double Delay
         {
             get => Model.Delay;
@@ -105,49 +105,49 @@ namespace BluescreenSimulator.ViewModels
             get => _progress;
             set { _progress = Math.Min(value, 100); OnPropertyChanged(); }
         }
-        [CmdParameter("-sp", Description = "The bluescreen progress at start.", FullAlias = "start-progress")]
+        [CmdParameter("-sp", Description = "开始蓝屏时显示的进度", FullAlias = "start-progress")]
         public int StartingProgress
         {
             get => Model.StartingProgress;
             set => SetModelProperty(Math.Max(0, Math.Min(value, 100)));
         }
-        [CmdParameter("-c", Description = "The {command} to run after complete (Careful!)", FullAlias = "cmd")]
+        [CmdParameter("-c", Description = "蓝屏后运行的命令 {command}（小心!)", FullAlias = "cmd")]
         public string CmdCommand
         {
             get => Model.CmdCommand;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-f", Description = "Foreground (text) in rgb {value} hex format (#FFFFFF)", FullAlias = "foreground")]
+        [CmdParameter("-f", Description = "前景（文本）颜色（rgb {value} 16进制格式 (#FFFFFF)", FullAlias = "foreground")]
         public Color ForegroundColor
         {
             get => Model.ForegroundColor;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-b", Description = "Background color in rgb {value} hex format (#FFFFFF)", FullAlias = "background")]
+        [CmdParameter("-b", Description = "背景颜色（rgb {value} 16进制格式 (#FFFFFF)", FullAlias = "background")]
         public Color BackgroundColor
         {
             get => Model.BackgroundColor;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-r", Description = "Enable rainbow mode (discards background color settings)", FullAlias = "rainbow")]
+        [CmdParameter("-r", Description = "启用彩虹（忽略背景颜色设置）", FullAlias = "rainbow")]
         public bool RainbowMode
         {
             get => Model.RainbowMode;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-pf", Description = "Factor to scale the progress speed with, e.g., 2.1x (min 0.1, max 10)", FullAlias = "progress-factor")]
+        [CmdParameter("-pf", Description = "百分比增长速度倍数,如： 2.1x (最小 0.1, 最大 10)", FullAlias = "progress-factor")]
         public double ProgressFactor
         {
             get => Model.ProgressFactor;
             set => SetModelProperty(Math.Max(0.1, Math.Min(value, 10.0)));
         }
-        [CmdParameter("-psd", Description = "Seconds to wait before the progress starts counting up", FullAlias = "progress-start-delay")]
+        [CmdParameter("-psd", Description = "程序启动前等待的秒数", FullAlias = "progress-start-delay")]
         public double ProgressStartDelay
         {
             get => Model.ProgressStartDelay;
             set => SetModelProperty(Math.Max(0,value));
         }
-        [CmdParameter("-cafd", Description = "Seconds to wait after progress bar completion before closing the BSOD", FullAlias = "closing-after-start-delay")]
+        [CmdParameter("-cafd", Description = "进度完成后退出蓝屏前等待的秒数", FullAlias = "closing-after-start-delay")]
         public double ClosingAfterFinishDelay
         {
             get => Model.ClosingAfterFinishDelay;

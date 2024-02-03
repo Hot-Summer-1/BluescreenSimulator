@@ -4,11 +4,11 @@ using BluescreenSimulator.Views;
 namespace BluescreenSimulator.ViewModels
 {
     [SuppressMessage("ReSharper", "InconsistentNaming")]
-    [CmdParameter("--win9x", Description = "Uses a windows 9x blue screen.")]
+    [CmdParameter("--win9x", Description = "使用Windows 9x蓝屏")]
     [BluescreenView(typeof(BluescreenWindow9x))]
     public class Windows9xBluescreenViewModel : BluescreenViewModelBase<Windows9xBluescreen>
     {
-        public override string StyleName => "Windows 9x Style";
+        public override string StyleName => "Windows 9x样式";
 
         public Windows9xBluescreenViewModel() : this(null)
         {
@@ -19,37 +19,37 @@ namespace BluescreenSimulator.ViewModels
         {
         }
 
-        [CmdParameter("-e", Description = "The error, displayed on the bottom.", FullAlias = "error")]
+        [CmdParameter("-e", Description = "底端显示的错误消息", FullAlias = "error")]
         public string Error
         {
             get => Model.Error;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-bh", Description = "The header, displayed on a gray background, defaults to Windows.", FullAlias = "header")]
+        [CmdParameter("-bh", Description = "显示在灰色背景上的标题，默认为Windows", FullAlias = "header")]
         public string Header
         {
             get => Model.Header;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-i1", Description = "The first line of information.", FullAlias = "infoline1")]
+        [CmdParameter("-i1", Description = "第一行信息", FullAlias = "infoline1")]
         public string InfoLine1
         {
             get => Model.InfoLine1;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-i2", Description = "The second line of information.", FullAlias = "infoline2")]
+        [CmdParameter("-i2", Description = "第二行信息", FullAlias = "infoline2")]
         public string InfoLine2
         {
             get => Model.InfoLine2;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-i", Description = "The instructions to follow.", FullAlias = "instructions")]
+        [CmdParameter("-i", Description = "要遵循的指示", FullAlias = "instructions")]
         public string Instructions
         {
             get => Model.Instructions;
             set => SetModelProperty(value);
         }
-        [CmdParameter("-tc", Description = "The command to continue. Displayed on the bottom of the screen.", FullAlias = "continue")]
+        [CmdParameter("-tc", Description = "继续的命令，在屏幕底端显示。", FullAlias = "continue")]
         public string ToContinue
         {
             get => Model.ToContinue;

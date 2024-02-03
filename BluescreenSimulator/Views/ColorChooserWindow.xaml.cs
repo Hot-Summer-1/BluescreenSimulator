@@ -11,7 +11,7 @@ namespace BluescreenSimulator.Views
     /// </summary>
     public partial class ColorChooserWindow : Window
     {
-        private readonly ColorWindowData _data;
+        private  ColorWindowData _data;
         public ColorChooserWindow(Color? color = null, bool isWin10Background = false)
         {
             _data = new ColorWindowData();

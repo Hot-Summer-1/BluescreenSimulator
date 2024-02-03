@@ -21,6 +21,6 @@
                 <SolidColorBrush Color="{Binding Color, ElementName=Control}"></SolidColorBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Button Click="Button_Click" x:Name="PickButton">Pick a color...</Button>
+        <Button Click="Button_Click" x:Name="PickButton">选取颜色...</Button>
     </DockPanel>
 </UserControl>

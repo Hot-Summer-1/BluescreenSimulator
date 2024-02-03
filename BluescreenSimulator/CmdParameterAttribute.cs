@@ -13,7 +13,7 @@ namespace BluescreenSimulator
         public string Parameter { get; private set; }
         public string FullAlias { get; set; }
 
-        public string Description { get; set; } = "No description";
+        public string Description { get; set; } = "无描述";
 
         public static string NoDash(string source) => new string(source.Where((c,i) => c != '-' || i > 2).ToArray());
         public string GetCommandLineOption(bool isOption = false) => (FullAlias != null ? $"{NoDash(Parameter)}|{NoDash(FullAlias)}" : NoDash(Parameter)) + (isOption ? "" : "=");
@@ -113,7 +113,7 @@ namespace BluescreenSimulator
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Something bad occured when parsing the color: {c}, \n {e}");
+                MessageBox.Show($"解析颜色{c}时发生了错误, \n {e}");
             }
             result = default(Color);
             return false;

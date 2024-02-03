@@ -105,7 +105,7 @@ namespace BluescreenSimulator.Views
             p.WaitForExit();
             File.Delete(SEDPath);
             File.Delete(commandFile);
-            MessageBox.Show("Your EXE-File has been created.", "BluescreenWindow Simulator", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("EXE文件已创建。", "BluescreenWindow Simulator", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private string GenerateCommand()
@@ -120,16 +120,26 @@ namespace BluescreenSimulator.Views
         {
             if (!string.IsNullOrWhiteSpace(CurrentBluescreen.CmdCommand))
             {
-                var messageBoxResult = MessageBox.Show("Using a CMD command can be dangerous. " +
-                    "I will not be responsible for any data loss or other damage arising from irresponsible or careless use of the CMD command option. " +
-                    "Please re-check your command to make sure that you execute what you intended:\r\n\r\n" + CurrentBluescreen.CmdCommand.Trim() + "\r\n\r\n" + "Do you want to proceed?",
-                    "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                var messageBoxResult = MessageBox.Show("使用命令可能很危险。" +
+                    "对于因不负责任或不仔细使用命令选项而造成的任何数据丢失或其他损害，我概不负责。" +
+                    "请重新检查你的命令，以确保你执行了预期的操作：\r\n\r\n" + CurrentBluescreen.CmdCommand.Trim() + "\r\n\r\n" + "是否要继续？",
+                    "警告", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (messageBoxResult == MessageBoxResult.No)
                 {
                     return false;
                 }
             }
             return true;
+        }
+
+        private void Tabs_SelectionChanged()
+        {
+
+        }
+
+        private void Tabs_SelectionChanged_1()
+        {
+
         }
     }
 }

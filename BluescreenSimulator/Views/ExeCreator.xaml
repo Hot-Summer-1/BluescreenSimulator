@@ -13,7 +13,7 @@
         ShowInTaskbar="False"
         WindowStartupLocation="CenterOwner"
         Style="{StaticResource {x:Type Window}}"
-        Title="EXE Generator">
+        Title="EXE创建器">
     <Grid VerticalAlignment="Center">
         <Grid.Resources>
             <Style TargetType="{x:Type Grid}">
@@ -57,14 +57,14 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0">File name:</Label>
+        <Label Grid.Column="0" Grid.Row="0">文件名：</Label>
         <TextBox Name="FileName" Grid.Column="1" Grid.Row="0" ></TextBox>
 
-        <Label Grid.Column="0" Grid.Row="1">Used command:</Label>
+        <Label Grid.Column="0" Grid.Row="1">使用的命令：</Label>
         <TextBox Name="CommandBox" IsReadOnly="True" Grid.Column="1" Grid.Row="1"/>
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <Button Name="OkButton" Click="OkButton_Click" IsDefault="True">OK</Button>
-            <Button Name="cancelButton" IsCancel="True">Cancel</Button>
+            <Button Name="OkButton" Click="OkButton_Click" IsDefault="True">确定</Button>
+            <Button Name="cancelButton" IsCancel="True">取消</Button>
         </StackPanel>
     </Grid>
 </Window>

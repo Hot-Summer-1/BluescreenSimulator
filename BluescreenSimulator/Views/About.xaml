@@ -8,7 +8,7 @@
         Icon="/frown.ico"
         Style="{StaticResource {x:Type Window}}"
         ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
-        Title="Instructions" Height="523" Width="680">
+        Title="Instructions" Height="400" Width="680">
 
     <Window.Resources>
         <Style TargetType="Hyperlink">
@@ -18,44 +18,38 @@
                 </Trigger>
             </Style.Triggers>
             <Setter Property="Foreground" Value="Red" />
-            <Setter Property="TextDecorations" Value="" />
+            <Setter Property="TextDecorations" Value="None" />
         </Style>
     </Window.Resources>
 
-    <StackPanel>
+    <StackPanel Margin="0,0,0,0">
         <TextBlock Padding="10" FontWeight="Bold" Text="{x:Static local:AppInfo.AppTitle}" />
         <TextBlock Padding="10" TextWrapping="WrapWithOverflow">
-            This program simulates a BSOD without any danger or harm for your PC.
+            此程序模拟BSOD，不会对你的设备造成任何危害。
         </TextBlock>
         <TextBlock Padding="10,0,0,0" FontWeight="Bold">
-            Instructions:
+            介绍：
         </TextBlock>
         <TextBlock Padding="15,0,0,0" TextWrapping="Wrap">
-            • You can use the first fields (up to "Background color") to change the text on the BSOD. <LineBreak />
-            • In the "Background/Foreground color" fields you can set a background/foreground (text) color (RGB format). <LineBreak />
-            • With "Delay", you can set a BSOD to trigger after a specified amount of seconds. <LineBreak />
-            • QR code is transparent by default. You can choose to hide it (for Windows 8/8.1 style) or use the original-colored one.<LineBreak />
-            • Click "Give me an error" to trigger the BSOD. <LineBreak />
-            • To leave the BSOD screen, press Alt + F4 or F7. <LineBreak />
-            • If you have specified a delay, you can cancel it by clicking "Cancel BSOD". <LineBreak />
-            • Leaving fields empty will set them to default values, which are set to replicate a Windows 9x/7/10 BSOD. <LineBreak />
-            • Delay defaults to 0 and command defaults to "no command". <LineBreak />
-            • The progress counter advances automatically. <LineBreak />
-            • A command line interface exists. Run <TextBlock FontFamily="Consolas">BluescreenSimulator --help</TextBlock> for more info.
+            • 你可以使用第一个字段（在“背景颜色”之上）来更改BSOD上的文本。 <LineBreak />
+            • 在“背景/前景色”字段中，你可以设置背景/前景色（文本）颜色（RGB格式）。 <LineBreak />
+            • 你可以用“延迟”将蓝屏设置为在指定的秒数后触发。<LineBreak />
+            • 默认情况下，二维码是透明的。你可以选择隐藏它（Windows 8/8.1 样式）或使用原始颜色。<LineBreak />
+            • 单击“BSOD”以触发BSOD。<LineBreak />
+            • 要退出BSOD，请按Alt + F4或F7。 <LineBreak />
+            • 如果你指定了延迟时间，则可以通过单击“取消BSOD”来取消蓝屏。 <LineBreak />
+            • 将字段留空会将它们设置为默认值，这些值为Windows 9x / 7 / 10 BSOD的真实值。<LineBreak />
+            • 延迟默认为0秒，命令默认为“无命令”。 <LineBreak />
+            • 传储百分比自动增加。 <LineBreak />
+            • 此程序可用命令行调用。运行 <TextBlock FontFamily="Consolas">BluescreenSimulator --help</TextBlock> 以获取更多信息。
         </TextBlock>
         <TextBlock Padding="10,10,10,0">
-            Bluescreen Simulator is open source!
+            Bluescreen Simulator是开源的！
         </TextBlock>
         <TextBlock Padding="10,0,0,0">
-            <Hyperlink NavigateUri="https://github.com/FlyTechVideos/BluescreenSimulator" Click="Hyperlink_Click">
-                Check out our Github repository
+            <Hyperlink NavigateUri="https://github.com/Hot-Summer-1/BluescreenSimulator" Click="Hyperlink_Click">
+                转到Github仓库
             </Hyperlink>
-        </TextBlock>
-        <TextBlock Padding="10,10,0,0">
-            I would be glad if you could subscribe to my channel!
-        </TextBlock>
-        <TextBlock Padding="10,0,0,0">
-            <Hyperlink NavigateUri="https://www.youtube.com/FlyTechVideos" Click="Hyperlink_Click">FlyTech Videos – YouTube Channel</Hyperlink>
         </TextBlock>
         <TextBlock Padding="10,10,0,0">
             This software is using the MIT-licensed library 'NDesk.Options'. |
